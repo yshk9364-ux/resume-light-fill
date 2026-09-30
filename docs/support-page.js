@@ -1,0 +1,5 @@
+'use strict';
+const tiers=[[1,'给作者加个油'],[3,'请作者喝瓶水'],[5,'请作者喝杯咖啡'],[10,'请作者吃个早餐'],[20,'给项目续一会儿命'],[30,'请作者吃顿简餐'],[50,'赞助一次网站适配'],[100,'超级感谢，给项目加个鸡腿']];
+const grid=document.querySelector('#tiers');
+for(const [amount,label] of tiers){const b=document.createElement('button');b.className='tier';b.setAttribute('aria-pressed','false');const n=document.createElement('strong');n.textContent='¥'+amount;const text=document.createElement('span');text.textContent=label;b.append(n,text);b.onclick=()=>{grid.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.querySelector('#selected').textContent='¥'+amount+' · '+label+'。请扫码后在支付应用中自行输入金额。';};grid.append(b);}
+for(const button of document.querySelectorAll('[data-choice]'))button.onclick=()=>{try{const choice=button.dataset.choice;const value={choice,updatedAt:new Date().toISOString()};localStorage.setItem('resumeSupportPagePreference',JSON.stringify(value));document.querySelector('#pref-status').textContent=choice==='supported'?'感谢你的支持！这只是本机标记，不读取支付状态。':choice==='never'?'已记住：本页以后不再提醒。':'已记住：本页今日不再提醒。';}catch{document.querySelector('#pref-status').textContent='浏览器未允许保存设置。';}};

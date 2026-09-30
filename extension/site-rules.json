@@ -1,0 +1,80 @@
+[
+  {
+    "name": "HotjobAdapter",
+    "domains": [
+      "hotjob.cn"
+    ],
+    "section": ".resume-module,.resume-section",
+    "record": ".resume-list-item",
+    "add": "[data-action=\"add\"],.add-btn,.btn-add",
+    "edit": "[data-action=\"edit\"],.edit-btn,.btn-edit",
+    "save": "[data-action=\"save\"],.save-btn,.btn-save"
+  },
+  {
+    "name": "BeisenAdapter",
+    "domains": [
+      "beisen.com",
+      "italent.cn"
+    ],
+    "section": ".resume-section,.resume-block",
+    "record": ".resume-block-item",
+    "add": "[data-action=\"add\"],.add-btn,.btn-add",
+    "edit": "[data-action=\"edit\"],.edit-btn,.btn-edit",
+    "save": "[data-action=\"save\"],.save-btn,.btn-save"
+  },
+  {
+    "name": "MokaAdapter",
+    "domains": [
+      "mokahr.com"
+    ],
+    "section": ".resume-section",
+    "record": ".experience-card",
+    "add": "[data-action=\"add\"],.add-btn,.btn-add",
+    "edit": "[data-action=\"edit\"],.edit-btn,.btn-edit",
+    "save": "[data-action=\"save\"],.save-btn,.btn-save"
+  },
+  {
+    "name": "51jobAdapter",
+    "domains": [
+      "51job.com"
+    ],
+    "section": ".resume-section",
+    "record": ".resume-item-card",
+    "add": "[data-action=\"add\"],.add-btn,.btn-add",
+    "edit": "[data-action=\"edit\"],.edit-btn,.btn-edit",
+    "save": "[data-action=\"save\"],.save-btn,.btn-save"
+  },
+  {
+    "name": "ZhaopinCampusAdapter",
+    "domains": [
+      "xiaoyuan.zhaopin.com"
+    ],
+    "section": ".resume-section,.resume-module",
+    "record": ".resume-record-item",
+    "add": "[data-action=\"add\"],.add-btn,.btn-add",
+    "edit": "[data-action=\"edit\"],.edit-btn,.btn-edit",
+    "save": "[data-action=\"save\"],.save-btn,.btn-save"
+  },
+  {
+    "name": "LiepinAdapter",
+    "domains": [
+      "liepin.com"
+    ],
+    "section": ".resume-section",
+    "record": ".experience-card",
+    "add": "[data-action=\"add\"],.add-btn,.btn-add",
+    "edit": "[data-action=\"edit\"],.edit-btn,.btn-edit",
+    "save": "[data-action=\"save\"],.save-btn,.btn-save"
+  },
+  {
+    "name": "ChinaPostAdapter",
+    "domains": [
+      "chinapost.com.cn"
+    ],
+    "section": ".resume-section,.panel",
+    "record": "tbody > tr",
+    "add": "[data-action=\"add\"],.add-btn,.btn-add",
+    "edit": "[data-action=\"edit\"],.edit-btn,.btn-edit",
+    "save": "[data-action=\"save\"],.save-btn,.btn-save"
+  }
+]
