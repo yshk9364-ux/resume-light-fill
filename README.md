@@ -4,6 +4,8 @@
 
 公开版本以空白资料启动，不包含作者的简历、联系方式、个人素材或使用记录。所有功能免费，采用 MIT 许可证。
 
+在线主页：<https://yshk9364-ux.github.io/resume-light-fill/> ｜ 直接安装：[简历轻填.user.js](https://raw.githubusercontent.com/yshk9364-ux/resume-light-fill/main/docs/download/%E7%AE%80%E5%8E%86%E8%BD%BB%E5%A1%AB.user.js)
+
 ## 安装与使用
 
 1. 安装 Tampermonkey / Violentmonkey 等脚本管理器。
@@ -25,7 +27,7 @@ AI 功能需要在设置中填写自己的 API。未配置 AI 时，文档可先
 
 ## 支持项目
 
-在助手点击“支持”，或打开 [项目介绍与赞助页面](docs/index.html)。微信支付和支付宝分别标注，金额为自愿建议，需要在支付应用内自行输入。
+在助手点击“支持”，或打开 [项目介绍与赞助页面](https://yshk9364-ux.github.io/resume-light-fill/#support)（仓库内副本：[docs/index.html](docs/index.html)）。微信支付和支付宝分别标注，金额为自愿建议，需要在支付应用内自行输入。
 
 公开脚本累计首次使用超过 30 分钟、成功写入至少 10 次后才可能提醒，自动提醒最多每 7 天一次。可以选择“今日不再提醒”“以后不再提醒”“已支持”。不会验证支付状态，不会限制免费功能。
 
