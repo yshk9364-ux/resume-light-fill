@@ -1,0 +1,136 @@
+<!doctype html>
+<!--
+  README / 社交分享卡片的横幅源文件。
+  改完用浏览器按 1280x640 截图，存为仓库根目录的 og.png。
+  配色与 docs/style.css 的变量保持一致。
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  :root{
+    --ink:#253b2e;
+    --muted:#697568;
+    --paper:#f7f6ef;
+    --line:#dbe0d4;
+    --rust:#ab5738;
+    --green:#2f5d43;
+    --wash:#eaf0e5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    width:1280px;height:640px;
+    background:var(--paper);
+    color:var(--ink);
+    font:15px/1.7 "PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+    display:grid;
+    grid-template-columns:1.02fr .98fr;
+    align-items:center;
+    gap:56px;
+    padding:0 72px;
+    position:relative;
+    overflow:hidden;
+  }
+  /* 右上角极淡的网格纹理，避免大面积纯色显得空 */
+  body::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      linear-gradient(var(--line) 1px,transparent 1px) 0 0/100% 44px,
+      linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/44px 100%;
+    opacity:.28;
+    mask-image:linear-gradient(105deg,#000 0 38%,transparent 62%);
+    -webkit-mask-image:linear-gradient(105deg,#000 0 38%,transparent 62%);
+  }
+  .left{position:relative;z-index:1}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--rust);
+  }
+  .eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--rust);display:block}
+  h1{
+    font-size:82px;line-height:1.06;letter-spacing:-.03em;
+    margin:22px 0 18px;font-weight:800;
+  }
+  h1 .mark{
+    display:inline-grid;place-items:center;
+    width:70px;height:70px;border-radius:18px;
+    background:var(--ink);color:#fff;font-size:44px;
+    vertical-align:10px;margin-right:16px;letter-spacing:0;
+  }
+  .tagline{font-size:33px;line-height:1.34;font-weight:600;letter-spacing:-.01em}
+  .tagline em{font-style:normal;color:var(--rust)}
+  .facts{
+    display:flex;gap:26px;margin-top:34px;padding-top:26px;
+    border-top:1px solid var(--line);
+  }
+  .facts div{display:flex;flex-direction:column;gap:2px}
+  .facts b{font-size:30px;font-weight:750;letter-spacing:-.02em;line-height:1.1}
+  .facts span{font-size:13px;color:var(--muted)}
+
+  /* 右侧：示意用的表单卡片 */
+  .card{
+    position:relative;z-index:1;
+    background:#fff;border:1px solid var(--line);border-radius:18px;
+    box-shadow:14px 16px 0 var(--wash);
+    padding:26px 28px 22px;
+  }
+  .card-top{
+    display:flex;align-items:center;gap:6px;
+    padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:20px;
+  }
+  .dot{width:8px;height:8px;border-radius:50%;background:#d6dfd1}
+  .card-top strong{margin-left:auto;font-size:12px;color:var(--muted);font-weight:500}
+  .badge{
+    display:inline-block;font-size:12px;color:var(--green);
+    background:var(--wash);padding:5px 11px;border-radius:20px;margin-bottom:4px;
+  }
+  .card label{display:block;font-size:12px;color:var(--muted);margin:17px 0 7px}
+  .fake{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    border:1px solid var(--line);background:#fafbf7;
+    padding:11px 14px;border-radius:8px;font-size:14px;
+  }
+  .fake.filled{color:var(--ink);font-weight:600}
+  .fake .ok{color:var(--green);font-size:15px;flex:none}
+  .note{
+    margin-top:20px;padding-top:16px;border-top:1px solid var(--line);
+    display:flex;align-items:center;gap:8px;
+    font-size:13px;color:var(--muted);
+  }
+  .note b{color:var(--green);font-weight:700}
+  .foot{
+    position:absolute;left:72px;bottom:34px;z-index:1;
+    font-size:14px;color:var(--muted);letter-spacing:.02em;
+  }
+  .foot b{color:var(--ink);font-weight:650}
+</style>
+</head>
+<body>
+  <div class="left">
+    <span class="eyebrow"><i></i>OPEN SOURCE · MIT</span>
+    <h1><span class="mark">填</span>简历轻填</h1>
+    <p class="tagline">少填一遍，<br>多一点<em>时间。</em></p>
+    <div class="facts">
+      <div><b>118</b><span>字段</span></div>
+      <div><b>887</b><span>字段别名</span></div>
+      <div><b>7</b><span>站点适配</span></div>
+      <div><b>0</b><span>预置个人资料</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      <strong>你的下一份机会</strong>
+    </div>
+    <span class="badge">教育经历 · 已锁定本段</span>
+    <label>学校名称</label>
+    <div class="fake filled"><span>从本机资料库写入</span><span class="ok">✓</span></div>
+    <label>开始时间</label>
+    <div class="fake filled"><span>已转换成网页格式</span><span class="ok">✓</span></div>
+    <div class="note"><b>✓</b>写入后读回验证 · 不自动投递</div>
+  </div>
+
+  <div class="foot">油猴脚本 · <b>本机资料库</b> · 逐字段确认后写入</div>
+</body>
+</html>
